@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "ccb885a1-f37f-48c9-adf3-cd03db439cfd",
+		"name": "API documentation",
+		"description": "# 📄 Get started here\n\nThis template contains a boilerplate for documentation that you can quickly customize and reuse.\n\n## 🔖 How to use this template\n\n- Replace the content given brackets (()) with your API's details.\n- Tips are formatted in `codespan` - feel free to read and remove them.\n    \n\n---\n\n`Start with a brief overview of what your API offers.`\n\nThe ((product name)) provides many API products, tools, and resources that enable you to ((add product value here)).\n\n`You can also list the APIs you offer, link to the relevant pages, or do both in this section.`\n\n## **Getting started guide**\n\n`List the steps or points required to start using your APIs. Make sure to cover everything required to reach success with your API as quickly as possible.`\n\nTo start using the ((add APIs here)), you need to -\n\n`The points given below are from The Postman API's documentation. You can reference it to write your own getting started guide.`\n\n- You must use a valid API Key to send requests to the API endpoints. You can get your API key from Postman's [integrations dashboard](https://go.postman.co/settings/me/api-keys).\n- The API has [rate and usage limits](https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/).\n- The API only responds to HTTPS-secured communications. Any requests sent via HTTP return an HTTP 301 redirect to the corresponding HTTPS resources.\n- The API returns request responses in JSON format. When an API request returns an error, it is sent in the JSON response as an error key.\n    \n\n## Authentication\n\n`Add details on the authorization keys/tokens required, steps that cover how to get them, and the relevant error codes.`\n\nThe ((product name)) API uses ((add your API's authorization type)) for authentication.\n\n`The details given below are from the Postman API's documentation. You can reference it to write your own authentication section.`\n\nPostman uses API keys for authentication. You can generate a Postman API key in the [API keys](https://postman.postman.co/settings/me/api-keys) section of your Postman account settings.\n\nYou must include an API key in each request to the Postman API with the X-Api-Key request header.\n\n### Authentication error response\n\nIf an API key is missing, malformed, or invalid, you will receive an HTTP 401 Unauthorized response code.\n\n## Rate and usage limits\n\n`Use this section to cover your APIs' terms of use. Include API limits, constraints, and relevant error codes, so consumers understand the permitted API usage and practices.`\n\n`The example given below is from The Postman API's documentation. Use it as a reference to write your APIs' terms of use.`\n\nAPI access rate limits apply at a per-API key basis in unit time. The limit is 300 requests per minute. Also, depending on your plan, you may have usage limits. If you exceed either limit, your request will return an HTTP 429 Too Many Requests status code.\n\nEach API response returns the following set of headers to help you identify your use status:\n\n| Header | Description |\n| --- | --- |\n| `X-RateLimit-Limit` | The maximum number of requests that the consumer is permitted to make per minute. |\n| `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window. |\n| `X-RateLimit-Reset` | The time at which the current rate limit window resets in UTC epoch seconds. |\n\n### 503 response\n\nAn HTTP `503` response from our servers indicates there is an unexpected spike in API access traffic. The server is usually operational within the next five minutes. If the outage persists or you receive any other form of an HTTP `5XX` error, [contact support](https://support.postman.com/hc/en-us/requests/new/).\n\n### **Need some help?**\n\n`Add links that customers can refer to whenever they need help.`\n\nIn case you have questions, go through our tutorials ((link to your video or help documentation here)). Or visit our FAQ page ((link to the relevant page)).\n\nOr you can check out our community forum, there’s a good chance our community has an answer for you. Visit our developer forum ((link to developer forum)) to review topics, ask questions, and learn from others.\n\n`You can also document or add links to libraries, code examples, and other resources needed to make a request.`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38757113"
+	},
+	"item": [
+		{
+			"name": "task_api",
+			"item": [
+				{
+					"name": "Get tasks",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tenco",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sabi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/tasks/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: GET\n        \n    2. URL: `http://localhost:8000/tasks/`\n        \n    3. Description: \"Fetches a list of tasks\"\n        \n2. **Request Parameters:**\n    \n    1. Header: `Authorization: Basic`\n        \n3. **Example Response:**\n    \n    1. Status: 200 OK\n        \n    2. Body: `[{ \"author\": String, \"title\": String, \"done\": Boolean, \"creation_date\": Datetime, \"pk\": Number}]`"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new task",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tenco",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sabi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Lotem\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/tasks/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: POST\n        \n    2. URL: `http://localhost:8000/tasks/`\n        \n    3. Description: \"Creates new task\"\n        \n2. **Request Parameters:**\n    \n    1. Header: `Authorization: Basic`\n        \n3. **Example Response:**\n    \n    1. Status: 201 OK\n        \n    2. Body: `{\"author\": Number, \"title\": String\", \"done\": Boolean, \"creation_date\": Datetime, \"pk\": Number}`"
+					},
+					"response": []
+				},
+				{
+					"name": "Update task",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tenco",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sabi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"popopopopo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/tasks/41/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"41",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: PUT\n        \n    2. URL: `http://localhost:8000/tasks/{pk}/`\n        \n    3. Description: \"Creates new task\"\n        \n2. **Request Parameters:**\n    \n    1. Header: `Authorization: Basic`\n        \n3. **Example Response:**\n    \n    1. Status: 200 OK\n        \n    2. Body: `{\"author\": Number, \"title\": String\", \"done\": Boolean, \"creation_date\": Datetime, \"pk\": Number}`"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete task",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tenco",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sabi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/tasks/41/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tasks",
+								"41",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: DELETE\n        \n    2. URL: `http://localhost:8000/tasks/{pk}/`\n        \n    3. Description: \"Deletes task\"\n        \n2. **Request Parameters:**\n    \n    1. Header: `Authorization: Basic`\n        \n3. **Example Response:**\n    \n    1. Status: 204 No Content"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users_api",
+			"item": [
+				{
+					"name": "Register a user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"someUser\",\n    \"password\": \"somePassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"register",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: POST\n        \n    2. URL: `http://localhost:8000/auth/register/`\n        \n    3. Description: \"Register new user\"\n        \n2. **Example Response:**\n    \n    1. Status: 201 Created\n        \n    2. Body: `{\"username\": String, \"password\" : String}`"
+					},
+					"response": []
+				},
+				{
+					"name": "Log the user in",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"someUser\",\n    \"password\": \"somePassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: POST\n        \n    2. URL: `http://localhost:8000/auth/login/`\n        \n    3. Description: \"Log the user in\"\n        \n2. **Example Response:**\n    \n    1. Status: 200 OK\n        \n    2. Body: `{\"username\": String, \"password\" : String}`"
+					},
+					"response": []
+				},
+				{
+					"name": "Log the user out",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tenco",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sabi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/auth/logout/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"logout",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: GET\n        \n    2. URL: `http://localhost:8000/auth/logout/`\n        \n    3. Description: \"Logs out the user\"\n        \n2. **Request Parameters:**\n    \n    1. Header: `Authorization: Basic`\n        \n3. **Example Response:**\n    \n    1. Status: 200 OK\n        \n    2. Body: `{\"detail\": \"You were successful logged-out!\"}`"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a users list",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tenco",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sabi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/auth/users/all/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"users",
+								"all",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: GET\n        \n    2. URL: `http://localhost:8000/auth/users/all/`\n        \n    3. Description: \"Fetches a list of users\"\n        \n2. **Request Parameters:**\n    \n    1. Header: `Authorization: Basic`\n        \n3. **Example Response:**\n    \n    1. Status: 200 OK\n        \n    2. Body: `[{ \"username\": String, \"completed\": Number, \"not_completed\": Number, \"date_joined\": Datetime, \"pk\": Number}]`"
+					},
+					"response": []
+				},
+				{
+					"name": "Increment user statistic",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "tenco",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sabi",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"completed\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/user/statistic/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"user",
+								"statistic",
+								""
+							]
+						},
+						"description": "1. **Request Configuration:**\n    \n    1. Method: PUT\n        \n    2. URL: `http://localhost:8000/auth/user/statistic/`\n        \n    3. Description: \"Increments the user statistic\"\n        \n2. **Request Parameters:**\n    \n    1. Header: `Authorization: Basic`\n        \n3. **Example Response:**\n    \n    1. Status: 200 OK\n        \n    2. Body:`{\"detail\": \"The operation was successful!\"}`"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
