@@ -18,5 +18,3 @@ index.html will be served as the default  file  to  any  directory  re‐quests.
 **3) Docker container :whale::**<br />
 ```sudo docker build -t <new_image_name> <export_path>```<br />
 ```docker run -d -p <port>:<port> <image_name> <new_container_name>```
-[![brettops tool](https://img.shields.io/badge/brettops-tool-209cdf?labelColor=162d50)](https://brettops.io)
-
