@@ -1,5 +1,5 @@
 # todobyddy :dart:
-> This is a fullstack application for tracking your tasks and achieving your goals!
+> This is a full stack application for tracking your tasks and achieving your goals!
 
 <div align='center'>
   <img src='./frontend/src/assets/dartboard.png' alt='todobyddy preview' height='250px' />
