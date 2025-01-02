@@ -12,7 +12,7 @@
 3. Ease in usage.
 
 ## Setting up on local pc:
-```source path/to/virtual/environment/activate```<br />  
+```git clone https://github.com/sabi70/todobuddy.git```<br />  
 
 ## Runnning backend:
 **a) Django development server:**<br />
@@ -32,3 +32,20 @@ index.html will be served as the default  file  to  any  directory  re‐quests.
 **c) Docker container :whale::**<br />
 ```sudo docker build -t <new_image_name> <export_path>```<br />
 ```docker run -d -p <port>:<port> <image_name> <new_container_name>```
+
+## Used technologies:
+1) Backend:<br />
+  > -Django<br />
+  > -Gunicorn<br />
+  > -Nginx<br />
+  > -Postman<br />
+  > -Docker<br />
+  > -Git<br />
+ 2) Frontned:<br />
+  > -Vue<br />
+  > -Vuetify<br />
+  > -Figma<br />
+  > -GIMP<br />
+  > -Git<br />
+  > -Nginx<br />
+  > -Docker<br />
