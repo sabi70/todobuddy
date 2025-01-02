@@ -41,7 +41,7 @@ index.html will be served as the default  file  to  any  directory  re‐quests.
   > -Postman<br />
   > -Docker<br />
   > -Git<br />
- 2) Frontned:<br />
+ 2) Frontend:<br />
   > -Vue<br />
   > -Vuetify<br />
   > -Figma<br />
