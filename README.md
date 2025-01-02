@@ -1,5 +1,18 @@
-## Welcome to your todobuddy! :dart:
-This is a fullstack application for tracking your tasks and achieving your goals!
+# todobyddy :dart:
+> This is a fullstack application for tracking your tasks and achieving your goals!
+
+<div align='center'>
+  <img src='./frontend/src/assets/dartboard.png' alt='todobyddy preview' height='250px' />
+</div>
+
+## Features
+
+1. Responsive and intuitive design.
+2. Dark and light theme support.
+3. Ease in usage.
+4. 
+
+
 ## Runnning backend:
 **1) Django development server:**<br />
 ```source path/to/virtual/environment/activate```<br />
