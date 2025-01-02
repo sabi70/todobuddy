@@ -2,7 +2,7 @@
 > This is a fullstack application for tracking your tasks and achieving your goals!
 
 <div align='center'>
-  <img src='./frontend/src/assets/dartboard.png' alt='todobyddy preview' max-height='250px' />
+  <img src='./frontend/src/assets/dartboard.png' alt='todobyddy preview' max-height='250px' max-width='200px' />
 </div>
 
 ## Features
