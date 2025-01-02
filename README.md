@@ -49,3 +49,9 @@ index.html will be served as the default  file  to  any  directory  re‐quests.
   > -Git<br />
   > -Nginx<br />
   > -Docker<br />
+
+## Author:
+
+👤 **sabi70**
+
+- Github: [@sabi70](https://github.com/sabi70)
